@@ -1,0 +1,425 @@
+@charset "utf-8";
+.mv {
+    position: relative;
+}
+
+.mv_text {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 28px;
+  line-height: 1.8;
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.mv_img img {
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+/* STYLEセクション */
+.style {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.style_text {
+  margin-bottom: 60px;
+  line-height: 2;
+  font-size: 16px;
+  color: #525252;
+}
+
+/* グリッド */
+.style_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* 画像 */
+.style_item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  cursor: zoom-in;
+}
+
+.style_item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: 0.4s;
+}
+
+.style_item:hover img {
+  transform: scale(1.05);
+}
+
+/* オーバーレイ */
+.style_overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+/* アイコン */
+.view_icon {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  color: #fff;
+  font-size: 26px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: 0.4s 0.2s;
+  margin-left: 5px;
+}
+
+.view_text {
+  position: absolute;
+  bottom: 24px;
+  right: 40px;
+  color: #fff;
+  font-size: 12px;
+  opacity: 0.7;
+  transform: scale(0.8);
+  transition: 0.3s;
+}
+
+/* テキスト */
+.style_caption {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 0.4s 0.1s;
+}
+
+/* ホバー時 */
+.style_item:hover .style_overlay {
+  opacity: 1;
+}
+
+.style_item:hover .style_caption {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ホバー時に表示 */
+.style_item:hover .view_icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.view_text {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  opacity: 0.8;
+}
+
+/*モーダル機能*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_img {
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.modal_close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/*before after セクション*/
+.style_detail {
+  padding: 100px 0;
+}
+
+/* 横並び */
+.style_detail_inner {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+/* 左画像 */
+.style_detail_img {
+  flex: 1;
+}
+
+.style_detail_img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 右テキスト */
+.style_detail_text {
+  flex: 1;
+}
+
+/* タイトル */
+.detail_title {
+  font-size: 28px;
+  letter-spacing: 0.15em;
+  color: #c89a8b;
+  margin-bottom: 20px;
+}
+
+/* リード文 */
+.detail_lead {
+  font-size: 20px;
+  line-height: 2;
+  margin-bottom: 40px;
+  color: #525252;
+}
+
+/* ボックス */
+.detail_box {
+  margin-bottom: 30px;
+}
+
+.detail_box h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  letter-spacing: 0.1em;
+  color: #525252;
+}
+
+.detail_box ul {
+  padding-left: 20px;
+}
+
+.detail_box li {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 5px;
+  color: #525252;
+}
+
+/*CTA*/
+.concept_cta {
+  padding: 0 20px 100px;
+  text-align: center;
+}
+
+.concept_cta .inner {
+    max-width: 900px;
+    border: 1px solid #e3dcd7;
+    padding: 80px 40px;
+    background-color: #f8f5f2;
+}
+.concept_cta h2 {
+  font-size: 28px;
+  color: #c89a8b;
+  margin-bottom: 25px;
+  letter-spacing: 0.1em;
+}
+
+.concept_cta p {
+  margin-bottom: 50px;
+  line-height: 2;
+  color: #525252;
+  gap: 30px;
+}
+
+/* ボタン */
+.cta_btns {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  transition: 0.3s;
+  border: 1px solid #c89a8b;
+  color: #c89a8b;
+  background-color: transparent;
+}
+
+.btn:hover {
+    background-color: #c89a8b;
+    color: #fff;
+}
+.btn.primary {
+  background-color: #c08983;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.primary:hover {
+    background-color: #a8746e;
+}
+
+/*768pxレスポンシブ対応*/
+@media screen and (max-width: 768px) {
+    /* MV */
+    .mv_img img {
+        height: 300px;
+    }
+
+    .mv_text {
+        left: 5%;
+        font-size: 20px;
+    }
+
+    /*グリッド*/
+    .style {
+        padding: 80px 0;
+    }
+
+    .style_grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .style_text {
+      font-size: 14px;
+    }
+
+    .style_item img {
+        height: 180px;
+    }
+
+    .style_caption {
+        font-size: 14px;
+    }
+
+    /*before after*/
+    .style_detail {
+        padding: 80px 0;
+    }
+
+    .style_detail_inner {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .style_detail_img img {
+        width: 100%;
+    }
+
+    .style_detail_text {
+        text-align: center;
+    }
+
+    .detail_title {
+        font-size: 22px;
+    }
+
+    .detail_lead {
+        font-size: 14px;
+    }
+
+    .detail_box {
+        text-align: left;
+    }
+
+    /* CTA */
+        .concept_cta {
+        padding: 60px 20px;
+    }
+
+    .concept_cta .inner {
+        padding: 40px 20px;
+    }
+
+    /* ボタン縦並び */
+    .cta_btns {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    /*CTA*/
+    .concept_cta h2 {
+        font-size: 24px;
+    }
+
+    .concept_cta p {
+        font-size: 14px;
+    }
+
+    /*モーダル*/
+    .modal_img {
+        max-width: 95%;
+        max-height: 70%;
+    }
+
+    .modal_close {
+        top: 15px;
+        right: 20px;
+        font-size: 30px;
+    }
+}
+
+/*768pxここまで*/
+
+/*480pxレスポンシブ対応*/
+@media screen and (max-width: 480px) {
+    .mv_text {
+        font-size: 16px;
+    }
+
+    /*グリッド*/
+    .style_grid {
+        grid-template-columns: 1fr;
+    }
+
+    /*before after*/
+    .style_item img {
+        height: 220px;
+    }
+
+    .detail_title {
+        font-size: 20px;
+    }
+
+    .detail_box li {
+        font-size: 13px;
+    }
+
+}
+    
+/*480pxここまで*/

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RESERVATION | Lumiere</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reservation.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+</head>
+
+<body id="top">
+    <header class="header">
+        <div class="header_inner">
+
+            <h1><a href="index.html"><img src="images/logo.png" alt="ロゴ"></a></h1>
+
+        <nav class="nav">
+      <ul class="nav_list">
+        <li><a href="index.html">TOP</a></li>
+        <li><a href="concept.html">CONCEPT</a></li>
+        <li><a href="style.html">STYLE</a></li>
+        <li><a href="menu.html">MENU</a></li>
+        <li><a href="access.html">ACCESS</a></li>
+        <li class="nav_reservation">
+          <a href="reservation.html" class="active">RESERVATION</a>
+        </li>
+      </ul>
+    </nav>
+
+    <a href="reservation.html" class="reservation_btn_header active">RESERVATION</a>
+    <div class="menu_toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+</header>
+
+<section class="mv">
+  <div class="mv_img">
+    <img src="images/mv_reservation.jpg" alt="カット風景">
+  </div>
+
+  <div class="mv_text">
+    <p>
+      予約はこちらから承っております
+    </p>
+  </div>
+</section>
+
+<section class="reservation">
+  <div class="reservation_inner">
+
+    <h2 class="page_title">RESERVATION</h2>
+
+    <p class="reservation_text">
+      ご希望の日時やメニューをお選びいただき、<br>
+      お気軽にご予約ください。
+    </p>
+
+    <div class="form_box">
+      <h3 class="form_title">予約フォーム</h3>
+
+      <form action="#" method="post">
+
+        <div class="form_item">
+          <label>お名前</label>
+          <input type="text" name="name">
+        </div>
+
+        <div class="form_item">
+          <label>ふりがな</label>
+          <input type="text" name="kana" required>
+        </div>
+
+        <div class="form_item">
+          <label>お電話番号</label>
+          <input type="tel" name="tel" required>
+        </div>
+
+        <div class="form_item">
+          <label>メールアドレス</label>
+          <input type="email" name="email" required>
+        </div>
+
+        <div class="form_item" required>
+          <label>メニュー内容</label>
+          <select name="menu">
+            <option value="">選択してください</option>
+            <option value="cut">カット</option>
+            <option value="color">カラー</option>
+            <option value="perm">パーマ</option>
+            <option value="treatment">トリートメント</option>
+            <option value="set">セット</option>
+          </select>
+        </div>
+
+        <div class="form_item textarea">
+          <label>ご要望</label>
+          <textarea name="message"></textarea>
+        </div>
+
+        <div class="form_btn">
+          <button type="submit">送信する</button>
+        </div>
+
+      </form>
+
+      <div class="form_note">
+        <p>※ご予約は前日までにお願いいたします。</p>
+        <p>※当日のキャンセルはお電話にてご連絡ください。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer_inner">
+
+    <h1 class="footer_logo">
+      <img src="images/logo.png" alt="Lumiere">
+    </h1>
+
+    <nav class="footer_nav">
+      <ul class="footer_nav_list">
+        <li><a href="index.html">TOP</a></li>
+        <li><a href="concept.html">CONCEPT</a></li>
+        <li><a href="style.html">STYLE</a></li>
+        <li><a href="menu.html">MENU</a></li>
+        <li><a href="access.html">ACCESS</a></li>
+        <li><a href="reservation.html">RESERVATION</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer_access">
+      <p>アクセス</p>
+      <p>東京都新宿区</p>
+      <p>OPEN 10:00 - 20:00</p>
+    </div>
+
+    <p class="footer_copy">© 2026 Lumiere All rights reserved.</p>
+
+  </div>
+</footer>
+
+<div class="fixed_reservation">
+  <a href="reservation.html">WEB予約</a>
+  <a href="tel:0123456789">TEL</a>
+</div>
+
+<a href="#top" class="page_top">↑</a>
+
+<script>
+  const toggle = document.querySelector(".menu_toggle");
+  const nav = document.querySelector(".nav");
+
+  toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+  });
+
+ const pageTop = document.querySelector(".page_top");
+const footer = document.querySelector(".footer");
+
+window.addEventListener("scroll", () => {
+
+  if (window.scrollY > 300) {
+    pageTop.classList.add("show");
+  } else {
+    pageTop.classList.remove("show");
+  }
+
+  const footerTop = footer.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+
+  if (footerTop < windowHeight) {
+    pageTop.classList.add("footer_active");
+  } else {
+    pageTop.classList.remove("footer_active");
+  }
+
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,489 @@
+@charset "utf-8";
+
+/*スクロール*/
+html {
+  scroll-behavior: smooth;
+}
+
+.menu_block {
+  scroll-margin-top: 100px;
+}
+
+/*ボタン*/
+.page_top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #c89a8b;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  border-radius: 50%;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/*フッター上での色変更*/
+.page_top.footer_active {
+  background-color: #fff;
+  color: #c89a8b;
+  border: 1px solid #c89a8b;
+}
+/* 表示時 */
+.page_top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ホバー */
+.page_top:hover {
+  opacity: 0.8;
+}
+/*TOPへ戻るここまで*/
+
+/* ヘッダー */
+.header {
+    background-color: #C6A192;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* 中身 */
+.header_inner {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+}
+
+/* ロゴ */
+.header_inner img {
+    width: 240px;
+    height: auto;
+    display: block;
+}
+.header_logo {
+  flex-shrink: 0;
+}
+
+/*ナビ*/
+.nav {
+    margin-left: 60px;
+}
+.nav_list {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+.nav_list a {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    transition: 0.3s;
+    opacity: 0.95;
+}
+
+/*ナビ目印*/
+.nav_list a.active {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 3px;
+}
+
+/*予約ボタン*/
+.reservation_btn_header{
+    background-color: #c08983;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.reservation_btn_header:hover {
+    background-color: #a8746e;
+}
+
+/*予約ボタン目印*/
+.reservation_btn_header.active {
+    background-color: #fff;
+    color: #c08983;
+    border: 1px solid #c08983;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.5);
+}
+
+.reservation_btn_header.current:hover {
+    background-color: #fff;
+}
+
+/*ヘッダーここまで*/
+
+/*ホバー*/
+a:hover {
+    opacity: 0.6;
+}
+
+/*基本レイアウト*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/*内容*/
+body {
+    font-family: "Noto Serif JP","Yu Mincho", "Hiragino Mincho ProN", "MS Mincho", serif;
+    background-color: #e9e6e3;
+}
+
+.inner {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* セクションタイトル */
+.section_title {
+    font-size: 32px;
+    letter-spacing: 0.25em;
+    color: #c89a8b;
+    margin-bottom: 35px;
+}
+
+/*ページタイトル*/
+.page_title {
+    font-size: 40px;
+    letter-spacing: 0.3em;
+    color: #c89a8b;
+    margin-bottom: 100px;
+    text-align: center;
+}
+/*テキストボックス*/
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+/*基本レイアウトここまで*/
+/* フッター */
+.footer {
+    background-color: #B89284;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* 中身 */
+.footer_inner {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* ロゴ */
+.footer_logo img {
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+/* ナビ */
+.footer_nav_list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.footer_nav_list li {
+    margin-bottom: 12px;
+    line-height: 2;
+}
+
+.footer_nav_list a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    transition: 0.3s;
+}
+
+/* アクセス */
+.footer_access {
+    margin-bottom: 40px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+.footer_access p:first-child {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* コピーライト */
+.footer_copy {
+    font-size: 12px;
+    opacity: 0.8;
+}
+/*フッターここまで*/
+
+/*ハンバーガーボタン*/
+.menu_toggle {
+    display: none;
+    width: 30px;
+    height: 22px;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu_toggle span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+.menu_toggle span:nth-child(1) { 
+    top: 0; 
+}
+.menu_toggle span:nth-child(2) {
+     top: 10px;
+}
+.menu_toggle span:nth-child(3) {
+     bottom: 0; 
+}
+
+.nav_reservation a {
+    display: block;
+    background-color: #c08983;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    border-radius: 5px;
+    margin-top: 20px;
+    letter-spacing: 0.1em;
+}
+
+.nav_reservation {
+    display: none;
+}
+
+.nav_reservation a.active {
+    background-color: #fff;
+    color: #fff;
+}
+/*ハンバーガーボタンここまで*/
+
+/*固定予約ボタン*/
+.fixed_reservation {
+    display: none;
+}
+
+/* 1000pxヘッダーハンバーガーへ */
+@media screen and (max-width: 1000px) {
+        /* ナビ非表示 */
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #C6A192;
+        padding: 80px 20px;
+        transition: 0.3s;
+    }
+
+    .nav.active {
+        right: 0;
+    }
+
+    .nav_list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* ボタン小さく */
+    .reservation_btn_header {
+        display: none;
+    }
+
+    /* ハンバーガー表示 */
+    .menu_toggle {
+        display: block;
+    }
+
+    .nav_list a.active {
+        border-bottom: none;
+        background-color: rgba(255,255,255,0.1);
+        padding: 8px;
+        border-radius: 3px;
+    }
+    /*固定予約ボタン*/
+    .fixed_reservation {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .fixed_reservation a {
+        flex: 1;
+        text-align: center;
+        padding: 15px 0;
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+    }
+
+    /* WEB予約 */
+    .fixed_reservation a:first-child {
+        background-color: #c08983;
+    }
+
+    /* TEL */
+    .fixed_reservation a:last-child {
+        background-color: #a8746e;
+    }
+    .nav_reservation {
+        display: block;
+    }
+
+    /*TOPボタン少し上へ*/
+    .page_top {
+        bottom: 80px;
+    }
+
+    .page_top.footer_active {
+        bottom: 100px;
+    }
+}
+/*768pxレスポンシブ対応*/
+@media screen and (max-width: 768px) {
+
+    .header_inner {
+        height: 70px;
+    }
+    /* ナビ非表示 */
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #C6A192;
+        padding: 80px 20px;
+        transition: 0.3s;
+    }
+
+    .nav.active {
+        right: 0;
+    }
+
+    .nav_list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* ボタン小さく */
+    .reservation_btn_header {
+        display: none;
+    }
+
+    /*コンテンツに被らないように調整*/
+    body {
+        padding-bottom: 60px;
+    }
+
+    /*セクションタイトル*/
+    .section_title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    /*ページタイトル*/
+    .page_title {
+        font-size: 32px;
+    }
+
+    /*フッター*/
+    .footer {
+        padding: 60px 20px;
+    }
+
+    .footer_logo img {
+        height: 40px;
+    }
+
+    .footer_nav_list a {
+        font-size: 13px;
+    }
+
+    .footer_access {
+        font-size: 13px;
+    }
+}
+/*768pxここまで*/
+
+/*480pxレスポンシブ対応*/
+@media screen and (max-width: 480px) {
+
+    .header_inner {
+        padding: 0 15px;
+    }
+
+    .header_inner img {
+        height: 30px;
+        width: auto;
+    }
+
+    .nav {
+        width: 80%;
+    }
+
+    /*セクションタイトル*/
+    .section_title {
+        font-size: 20px;
+    }
+
+    /*ページタイトル*/
+    .page_title {
+        font-size: 26px;
+    }
+
+    /*フッター*/
+    .footer {
+        padding: 40px 15px;
+    }
+
+    .footer_nav_list li {
+        margin-bottom: 8px;
+    }
+
+    .footer_copy {
+        font-size: 11px;
+    }
+}
+
+/*480pxここまで*/

@@ -1,0 +1,539 @@
+@charset "utf-8";
+
+/* メインビジュアル */
+.mv {
+    margin-top: 100px;
+}
+/* 中身 */
+.mv_inner {
+    display: flex;
+    align-items: center;
+    gap: clamp(30px, 5vw, 80px);
+}
+
+/* テキスト */
+.mv_text {
+    flex: 0 0 auto;
+    font-size: 18px;
+    line-height: 2;
+    color: #5A4A46;
+}
+
+/* スライド */
+.mv_slider {
+    width: clamp(400px, 50vw, 800px);
+    aspect-ratio: 16 / 10;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+}
+/* 画像 */
+.mv_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* 表示中 */
+.mv_img.active {
+    opacity: 1;
+}
+
+/*メインビジュアルここまで*/
+
+/*コンセプト*/
+.concept {
+    padding: 120px 20px;
+}
+
+.concept_inner {
+    position: relative;
+}
+
+/*コンセプトボタン*/
+.concept_btn_wrap {
+  margin-top: 30px;
+}
+
+.concept_btn {
+  display: inline-block;
+  padding: 12px 32px;
+  border: 1px solid #c08983;
+  color: #c08983;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.concept_btn:hover {
+    background-color: #c08983;
+    color: #fff;
+}
+
+/* 画像 */
+.concept_img img {
+    width: 50%;
+    display: block;
+}
+
+/* テキストボックス */
+.concept_text {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55%;
+    background-color: #f4f2f0;
+    padding: 40px 70px 50px 60px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* リード */
+.concept_lead {
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 30px;
+    color: #525252;
+}
+
+/* 説明 */
+.concept_desc {
+    font-size: 14px;
+    line-height: 2.2;
+    color: #525252;
+    margin-bottom: 50px;
+}
+
+/*コンセプトここまで*/
+
+/*スタイル*/
+.style {
+    padding: 120px 20px;
+}
+
+/* グリッド */
+.style_grid {
+	display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* 画像 */
+.style_item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.style_item {
+    position: relative;
+    overflow: hidden;
+}
+
+/*オーバーレイ*/
+.style_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* テキスト */
+.style_text {
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 0.2em;
+}
+
+/* ホバー時 */
+.style_item:hover .style_overlay {
+    opacity: 1;
+}
+
+.style_item:hover img {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/*スタイルここまで*/
+
+/*メニュー*/
+.menu {
+    padding: 120px 20px;
+    background-color: #f4f2f0;
+}
+
+.menu_inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* グリッド */
+.menu_grid {
+    display: grid;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.menu_row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-content: center;
+}
+
+.menu_row_top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+}
+
+/* アイテム */
+.menu_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    max-height: 300px;
+    width: 100%;
+    max-width:300px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #e9e6e3;
+    border: 1px solid #cfcac7;
+    text-decoration: none;
+    color: #525252;
+    transition: 0.3s;
+}
+
+.menu_row_top .menu_item {
+    flex: 0 0 auto;
+}
+
+/* 中央配置 */
+.menu_item img {
+    height: 110px;
+}
+
+/* 英語 */
+.menu_en {
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    margin-bottom: 5px;
+}
+
+/* 日本語 */
+.menu_jp {
+    font-size: 13px;
+    color: #525252;
+}
+
+/* ホバー */
+.menu_item:hover {
+    border-color: #c89a8b;
+    background-color: #fff;
+    transform: translateY(-5px);
+}
+
+/* ボタン */
+.menu_btn_wrap {
+    margin-top: 60px;
+}
+
+.menu_btn {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid #c89a8b;
+    color: #c89a8b;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    transition: 0.3s;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+/* ホバー */
+.menu_btn:hover {
+    background-color: #c89a8b;
+    color: #fff;
+}
+
+/*メニューここまで*/
+
+/*アクセス*/
+.access {
+    padding: 120px 20px;
+    background-color: #e9e6e3;
+    text-align: center;
+}
+
+.access_inner {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.access_address {
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.access_time {
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    margin-bottom: 40px;
+}
+
+.access_btn {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid #c89a8b;
+    color: #c89a8b;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.access_btn:hover {
+    background-color: #c89a8b;
+    color: #fff;
+}
+
+/*アクセスここまで*/
+
+/*予約*/
+.reservation {
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.reservation_inner {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    background-color: #f4f2f0;
+}
+
+.reservation_lead {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #525252;
+}
+
+.reservation_desc {
+    font-size: 14px;
+    margin-bottom: 40px;
+    color: #525252;
+}
+
+.reservation_btn_wrap {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.reservation_btn {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid #c89a8b;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    transition: 0.3s;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.reservation_btn.form {
+    background-color: #c08983;
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.reservation_btn:hover {
+    background-color: #a8746e;
+    color: #fff;
+}
+
+.reservation_btn.tel {
+    background-color: #f4f2f0;
+    color: #c89a8b;
+}
+
+.reservation_btn.tel:hover {
+    background-color: #c89a8b;
+    color: #fff;
+}
+/*予約ここまで*/
+
+/*コンセプト欄レイアウト維持*/
+@media screen and (min-width: 1080px) {
+    
+    .menu_row {
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+        gap: 40px;
+        justify-content: center;
+    }
+
+    .menu_row_top {
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        justify-content: center;
+    }
+}
+
+/*768pxレスポンシブ対応*/
+@media screen and (max-width: 768px) {
+  .mv {
+		margin-top: 0;
+  }
+  .mv_inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mv_slider {
+    width: 100%;
+  }
+
+  .mv_text {
+    text-align: center;
+	order: 1;
+  }
+
+  /*コンセプト*/
+  .concept_inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .concept_img img {
+    width: 100%;
+  }
+
+  .concept_text {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 20px;
+    padding: 30px;
+  }
+
+  /*スタイル*/
+    .style_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /*メニュー*/
+  .menu_row,
+  .menu_row_top {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .menu_item {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /*予約*/
+  .reservation_inner {
+    padding: 60px 20px;
+  }
+
+  .reservation_btn_wrap {
+    flex-direction: column;
+    gap: 15px;
+  }
+  /*CTA*/
+  .concept_cta h2 {
+    font-size: 24px;
+  }
+
+  .concept_cta p {
+    font-size: 14px;
+  }
+
+}
+
+/*768pxここまで*/
+
+/*480pxレスポンシブ対応*/
+@media screen and (max-width: 480px) {
+
+  .mv {
+    margin-top: 80px;
+  }
+
+  .mv_text {
+    font-size: 14px;
+  }
+
+  /*コンセプト*/
+    .concept {
+    padding: 80px 15px;
+  }
+
+  .concept_text {
+    padding: 20px;
+  }
+
+    .concept_btn {
+    width: 100%;
+    text-align: center;
+  }
+
+    /*スタイル*/
+    .style_grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    }
+
+  /*メニュー*/
+  .menu_row,
+  .menu_row_top {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .menu {
+    padding: 80px 15px;
+  }
+
+  /*アクセス*/
+  .access {
+    padding: 80px 15px;
+  }
+
+  .access_address {
+    font-size: 14px;
+  }
+  
+  /*予約*/
+  .reservation {
+    padding: 80px 15px;
+  }
+
+  .reservation_inner {
+    padding: 40px 15px;
+  }
+}
+/*480pxここまで*/
