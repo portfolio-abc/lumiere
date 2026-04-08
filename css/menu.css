@@ -24,12 +24,12 @@
   display: block;
 }
 
-.style {
+.menu {
   padding: 120px 0;
 }
 
 /* リード文 */
-.style_lead {
+.menu_lead {
   text-align: center;
   line-height: 2;
   margin-bottom: 80px;
@@ -37,10 +37,9 @@
 }
 
 /* リスト */
-.style_list {
+.menu_list {
   display: flex;
   flex-direction: column;
-  gap: 80px;
 }
 
 /* 上段（横並び） */
@@ -57,7 +56,6 @@
 .menu_icon {
   border: 1px solid #ccc;
   padding: 40px 20px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -187,13 +185,17 @@
 
      /*縦並び*/
     .menu_top {
-    grid-template-columns: 1fr; 
-    gap: 20px;
-  }
+    	grid-template-columns: 1fr; 
+		gap: 5px;
+  	}
 
-    .menu_icon {
-        padding: 20px;
-    }
+	.menu_icon {
+  		padding: 20px;
+	}
+	
+	.menu_icon img {
+		max-height: 100px;
+	}
 
     .menu_block {
         margin-bottom: 80px;
@@ -253,6 +255,17 @@
         font-size: 16px;
     }
 
+	/* アイコン */
+	.menu_icon img {
+		max-height: 60px;
+	}
+	
+	.menu_icon p {
+		font-size: 12px;
+	}
 
+	.adjust_icon img {
+  		transform: translateX(7px);
+	}
 }
 /*480pxここまで*/
