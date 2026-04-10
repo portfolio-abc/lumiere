@@ -143,36 +143,7 @@
 
 <a href="#top" class="page_top">↑</a>
 
-<script>
-  const toggle = document.querySelector(".menu_toggle");
-  const nav = document.querySelector(".nav");
-
-  toggle.addEventListener("click", () => {
-  nav.classList.toggle("active");
-  });
-
- const pageTop = document.querySelector(".page_top");
-const footer = document.querySelector(".footer");
-
-window.addEventListener("scroll", () => {
-
-  if (window.scrollY > 300) {
-    pageTop.classList.add("show");
-  } else {
-    pageTop.classList.remove("show");
-  }
-
-  const footerTop = footer.getBoundingClientRect().top;
-  const windowHeight = window.innerHeight;
-
-  if (footerTop < windowHeight) {
-    pageTop.classList.add("footer_active");
-  } else {
-    pageTop.classList.remove("footer_active");
-  }
-
-});
-</script>
+<script src="js/script.js"></script>
 
 </body>
 
